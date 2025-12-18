@@ -9,6 +9,5 @@
 position = Vector2(486, 390)
 texture = ExtResource("1_rdw05")
 
-[node name="Tappy" parent="." instance=ExtResource("2_gwu2e")]
-position = Vector2(71, 473)
-scale = Vector2(0.75, 0.75)
+[node name="Tappy" parent="Rocks2" instance=ExtResource("2_gwu2e")]
+position = Vector2(-422, -29)
