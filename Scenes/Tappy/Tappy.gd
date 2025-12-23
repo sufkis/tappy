@@ -14,8 +14,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		_jumped = true
 
 func die() -> void:
-	set_physics_process(false)
-	animated_sprite_2d.stop()
+	get_tree().paused = true
 
 func _ready() -> void:
 	pass # Replace with function body.
