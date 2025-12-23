@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Tappy"
-run/main_scene="uid://cp2yabkxip7n6"
+run/main_scene="uid://cxt5x3kdbarw8"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://icon.svg"
+
+[autoload]
+
+GameManager="*res://Globals/GameManager.gd"
 
 [display]
 
