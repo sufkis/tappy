@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://ce1x48ttun1i8"]
+[gd_scene load_steps=7 format=3 uid="uid://ce1x48ttun1i8"]
 
 [ext_resource type="Script" uid="uid://bljicljso62dp" path="res://Scenes/GameUi/GameUi.gd" id="1_anb74"]
 [ext_resource type="FontFile" uid="uid://cx31w30axsp22" path="res://Assets/fonts/LuckiestGuy-Regular.ttf" id="1_mb7aw"]
+[ext_resource type="AudioStream" uid="uid://c6vw12ltumffm" path="res://Assets/audio/game_over.wav" id="3_anolp"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_anb74"]
 font = ExtResource("1_mb7aw")
@@ -25,6 +26,7 @@ outline_size = 5
 outline_color = Color(0.5529412, 0, 0.23529412, 1)
 
 [node name="GameUi" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -69,3 +71,12 @@ text = "Press Label"
 label_settings = SubResource("LabelSettings_tt7lr")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_anolp")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

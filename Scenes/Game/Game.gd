@@ -6,10 +6,6 @@ const PIPES = preload("uid://dnokfmil33cmm")
 @onready var upper_spawn: Marker2D = $UpperSpawn
 @onready var lower_spawn: Marker2D = $LowerSpawn
 
-func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("ui_cancel"):
-		GameManager.load_main_scene()
-
 func _ready() -> void:
 	spawn_pipes()
 
